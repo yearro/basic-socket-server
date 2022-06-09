@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "start": "node server/index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-heroku": "git push heroku main"
   },
   "author": "",
   "license": "ISC",
