@@ -4,6 +4,7 @@ const http     = require('http')
 const socketio = require('socket.io')
 const path     = require('path')
 const Sockets = require('./sockets')
+const cors    = require('cors')
 
 class Server {
   constructor() {
@@ -34,6 +35,8 @@ class Server {
 
   middlewares () {
     this.app.use(express.static(path.resolve(__dirname, '../../public')))
+    // Habilitar CORS para aceptar peticiones de otros dominios
+    this.app.use(cors())
   }
 }
 module.exports = Server
